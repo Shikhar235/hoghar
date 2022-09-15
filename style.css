@@ -20,9 +20,10 @@ li,a,button{
     align-items: center;
     padding: 30px 10%;
     /* text-align: center; */
-    background: #000000;
+    background: #b7a2a2;
     /* color: white; */
     /* font-size: 15px; */
+    
   }
   .logo{
     cursor: pointer;
@@ -42,7 +43,7 @@ li,a,button{
 }
 button{
     padding: 9px 25px;
-    background-color: rgb(78, 86, 88,1);
+    background-color: rgb(225, 127, 127);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -50,16 +51,27 @@ button{
 }
 button:hover
 {
-    background-color: rgba(0,136,169,0.8);
+    background-color: rgba(197, 178, 116, 0.8);
 }
-.vid_container{
-    margin-left: 50vw;
-  transform: translate(-50%);
- 
-  
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+.toggle-button .bar
+{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
 }
 .content{
-    background-color: #282d2e;
+    background-color: #c0c0c0;
 }
 .footer {
      /* display: flex; */
@@ -67,7 +79,176 @@ button:hover
     /* align-items: center; */
     padding: 30px 10%;
     text-align: center; 
-    background: #000000;
+    background: #c99d9d;
     /* color: white; */
     /* font-size: 15px; */
   }
+  
+.section {
+    background-color : #252121 ;
+    display: flex ;
+    justify-content : space-between ;
+   padding : 40px ;
+    width : 80% ;
+    margin-left: 50vw;
+  transform: translate(-50%);
+   /* margin : 10rem auto 0 auto ; */
+}
+.section img {
+   height : 250px ;
+    }
+.section h1 {
+    margin : 0 ;
+    font-size: 50;
+    color : #cebdbd;
+}
+.section p{
+    color : #cebdbd ;
+    margin-right : 15px ;
+}
+.section1 {
+    background-color : #252121 ;
+    display: flex ;
+    justify-content : space-between ;
+   padding : 40px ;
+    width : 68% ;
+    margin-left: 50vw;
+  transform: translate(-50%);
+   /* margin : 10rem auto 0 auto ; */
+}
+.section1 img {
+   height : 210px ;
+    }
+.section1 h1 {
+   margin : 0 ;
+    color : #cebdbd ;
+}
+.section1 p{
+    color : #cebdbd ;
+    margin-right : 15px ;
+}
+.container
+{
+     width : 100% ;
+     display : flex ;
+     justify-content : space-between ;
+     flex-wrap : wrap ;
+     padding : 40px ;
+     
+}
+.container .box
+{
+     position : relative ;
+     width : 320px ;
+     background : rgb(177, 105, 105) ;
+     padding : 100px 40px 60px ;
+     box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
+     cursor: pointer;
+}
+.container .box:before
+{
+
+   content : '' ;
+   position : absolute ;
+   top : 0 ;
+   Left : 0 ;
+   width : 100% ;
+   height : 100% ;
+   background : #785b65 ;
+   transform: scaleY(0);
+   transform-origin: top;
+   transition: transform 0.5s;
+}
+.container .box:hover:before{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+.container .box h2
+{
+   position : absolute ;
+   Left : 40px ;
+   top : 60px ;
+   font-size : 4em ;
+   font-weight : 800 ;
+   z-index : 1 ;
+   opacity : 0.1 ;
+   transition : 0.5s ;
+}
+.container .box:hover h2
+{
+   opacity: 1;
+   color: #fff;
+   transform: translateY(-40px);
+}
+.container .box h3
+{
+
+   position : relative ;
+   font-size : 1.5em ;
+   z-index : 2 ;
+   color: #333 ;
+   transition:0.5s ;
+}
+.container .box h3
+{
+
+   position : relative ;
+   z-index : 2 ;
+   color: #555 ;
+   transition:0.5s ;
+}
+.container .box:hover h3,
+.container .box:hover p
+{
+   color : #fff ;
+}
+@media(max-width: 767px)
+{
+    .section
+    {
+        flex-flow: row wrap;
+    }
+    .section img
+    {
+        display: block;
+        order: 1;
+        width: 100%;
+        height: 250px;
+    }
+    .section .text
+    {
+        display: block;
+        order: 2;
+        width: 100%;
+
+    }
+    .section .text-container{
+        padding: 20px 35px;
+    }
+}
+@media(max-width: 767px)
+{
+    .section1
+    {
+        flex-flow: row wrap;
+        width: 80%;
+    }
+    .section1 img
+    {
+        display: block;
+        order: 1;
+        width: 100%;
+        height: 250px;
+    }
+    .section1 .text1
+    {
+        display: block;
+        order: 2;
+        width: 100%;
+        
+    }
+    .section .text-container{
+        padding: 20px 35px;
+    }
+}
