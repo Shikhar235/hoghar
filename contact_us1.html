@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us | Hoghar</title>
+    <link rel="stylesheet" href="contact1.css">
+</head>
+<body>
+ 
+  <div class="header">
+    <a href="homepage_1.html"><img class="logo" width="120" height="70"src="2.png" alt="logo"></a>
+  <nav>  
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+ <ul class="nav_links">
+  <li><a  href="#">About us</a></li>
+  <li><a  href="#">Services</a></li>
+ </ul>
+  </nav>
+  <a class="cta" href="#"><button>Contact us</button></a>
+</div>
+
+    <section>
+        <div class="container">
+            <div class="contactInfo">
+                <div >
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                     <li>
+                       <span><img src="location1.png"></span>
+                       <span>baker's street<br>
+                         221B
+                       </span>
+                     </li>
+                     <li>
+                       <span><img src="mail.png"></span>
+                       <span>info@hoghar.in </span>
+                     </li>
+                     <li>
+                       <span><img src="call.png"></span>
+                       <span>1234567890 </span>
+                     </li>
+                    </ul>
+                    <!-- <ul class="sci">
+                       <li><a href="#"></a><img src="instagram.png"></a></li>
+                      <li><a href="#"></a><img src="facebook-app-symbol.png"></a></li>
+                      <li><a href="#"></a><img src="twitter.png"></a></li> 
+                       <li><a href="#"></a><img src=""></a></li>
+                    </ul> -->
+                </div >
+            </div>
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <form method="POST" name="google-sheet">
+                <div class="formBox">
+                  
+                  <div class="inputBox w50">
+                     <input type="text" name="First Name" required>
+                     <span>First Name</span>
+                  </div>
+                  <div class="inputBox w50">
+                    <input type="text" name="Last Name" required>
+                    <span>Last Name</span>
+                 </div>
+                 <div class="inputBox w50">
+                  <input type="text" name="Email" required>
+                  <span>Email Address</span>
+               </div>
+               <div class="inputBox w50">
+                <input type="text" name="Number" required>
+                <span>Mobile Number</span>
+             </div>
+             <div class="inputBox w100">
+              <textarea name="Message" required></textarea>
+              <span>Write your message here...</span>
+           </div>
+           <div class="inputBox w100">
+            <input type="submit" value="send">
+              </div>
+             
+                </div>
+              </form>
+                <script>
+                  const scriptURL = 'https://script.google.com/macros/s/AKfycbwic5vBUBv3U6qmzU9Tkc3t4EU9mZLLegJfvyg2JK9BcFFoXZ2K0jprZLX_dfWg1H904w/exec'
+                  const form = document.forms['google-sheet']
+                
+                  form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                      .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                      .catch(error => console.error('Error!', error.message))
+                  })
+                </script>
+            </div>
+        </div>
+    </section>
+  
+    <div class="footer">
+      <p align="center">hoghar<br>
+      <a style="float:center" href="">info@hoghar.in</a></p>
+  </div>
+</body>
+</html>
